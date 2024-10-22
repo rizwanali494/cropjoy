@@ -96,14 +96,16 @@ class Farm_Products extends StatelessWidget {
                 Center(
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(
-                          builder: (context) => const CheckoutPage()));
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CheckoutPage()));
                       // Handle buy action here
                       print('Buy button pressed');
                     },
                     child: Container(
-                      padding: EdgeInsets.only(left: 20,right: 20),
-                   height: screenHeight*0.065,
+                      padding: EdgeInsets.only(left: 20, right: 20),
+                      height: screenHeight * 0.065,
                       decoration: BoxDecoration(
                         color: Color(0xFF198910),
                         borderRadius: BorderRadius.circular(30),
@@ -111,26 +113,26 @@ class Farm_Products extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                        Row(
-                          children: [
-                            Image.asset('assets/images/Group 3.png'),
-                              SizedBox(width: 5,),
-
+                          Row(
+                            children: [
+                              Image.asset('assets/images/Group 3.png'),
+                              SizedBox(
+                                width: 5,
+                              ),
                               Text(
                                 'Added 1 to Cart',
                                 style: GoogleFonts.inter(
-                                  fontSize: screenWidth*0.04,
+                                  fontSize: screenWidth * 0.04,
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                          ],
-                        ),
-
+                            ],
+                          ),
                           Text(
                             'R 111,00', // Replace with product price dynamically
                             style: GoogleFonts.inter(
-                              fontSize: screenWidth*0.04,
+                              fontSize: screenWidth * 0.04,
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
                             ),
@@ -140,8 +142,9 @@ class Farm_Products extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
-
+                const SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           ),
